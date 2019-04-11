@@ -24,6 +24,7 @@ apply plugin: 'kotlin-spring'
 apply plugin: 'java-library'
 apply plugin: 'org.jmailen.kotlinter'
 apply plugin: 'org.ec4j.editorconfig'
+apply plugin: 'maven-publish'
 
 group = 'com.wbtcb'
 version = '0.0.1-SNAPSHOT'
@@ -31,6 +32,7 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    mavenLocal()
 }
 
 compileKotlin {
@@ -55,6 +57,14 @@ dependencies {
 
 editorconfig {
     excludes = ['out/**', 'build/**']
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
 }
 
 check.dependsOn editorconfigCheck
