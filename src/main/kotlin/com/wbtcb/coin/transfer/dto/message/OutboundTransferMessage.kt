@@ -6,7 +6,7 @@ import java.io.Serializable
 import java.math.BigDecimal
 import java.util.UUID
 
-open class OutboundTransferMessage constructor(
+data class OutboundTransferMessage constructor(
     val externalId: UUID,
     val channelCode: String,
     val currencyCode: String,

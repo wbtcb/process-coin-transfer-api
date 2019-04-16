@@ -3,27 +3,19 @@ package com.wbtcb.coin.transfer.dto.message
 import com.fasterxml.jackson.databind.JsonNode
 import com.wbtcb.coin.transfer.enum.OutboundTransferStatus
 import java.math.BigDecimal
+import java.io.Serializable
 import java.util.UUID
 
-class OutboundTransferUpdateMessage constructor(
-    externalId: UUID,
-    channelCode: String,
-    currencyCode: String,
-    addressTo: String,
-    amount: BigDecimal,
-    comment: String?,
-    status: OutboundTransferStatus,
-    metadata: JsonNode?,
+data class OutboundTransferUpdateMessage constructor(
+    val externalId: UUID,
+    val channelCode: String,
+    val currencyCode: String,
+    val addressTo: String,
+    val amount: BigDecimal,
+    val comment: String?,
+    val status: OutboundTransferStatus,
+    val metadata: JsonNode?,
     val transactionHash: String? = null,
     val fee: BigDecimal? = null,
     var reasons: List<MessageError>? = null
-) : OutboundTransferMessage(
-        externalId = externalId,
-        channelCode = channelCode,
-        currencyCode = currencyCode,
-        addressTo = addressTo,
-        amount = amount,
-        comment = comment,
-        status = status,
-        metadata = metadata
-    )
+) : Serializable
