@@ -10,7 +10,7 @@ data class PaymentUpdateMessage constructor(
     val orderRef: UUID,
     val channelCode: String,
     val currencyCode: String,
-    val addressTo: String,
+    val paymentAddress: String,
     val amount: BigDecimal,
     val comment: String?,
     val status: PaymentStatus,
