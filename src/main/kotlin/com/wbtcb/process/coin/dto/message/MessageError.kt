@@ -1,4 +1,4 @@
-package com.wbtcb.coin.transfer.dto.message
+package com.wbtcb.process.coin.dto.message
 
 import com.fasterxml.jackson.annotation.JsonIgnore
 import com.fasterxml.jackson.annotation.JsonInclude

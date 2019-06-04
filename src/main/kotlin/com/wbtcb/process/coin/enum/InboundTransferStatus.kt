@@ -1,4 +1,4 @@
-package com.wbtcb.coin.transfer.enum
+package com.wbtcb.process.coin.enum
 
 enum class InboundTransferStatus {
     PENDING,
