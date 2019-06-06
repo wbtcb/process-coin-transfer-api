@@ -15,7 +15,7 @@ class RabbitMqConstants {
         /**
             Payment transfer process
          */
-        const val PAYMENT_EXCHANGE = "pay"
+        const val PAYMENT_EXCHANGE = "payment"
 
         const val PAYMENT_COIN_ROUTING_PREFIX_KEY = "$PAYMENT_EXCHANGE.coin"
     }
