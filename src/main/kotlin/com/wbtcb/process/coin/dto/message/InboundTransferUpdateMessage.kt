@@ -7,7 +7,7 @@ import java.math.BigDecimal
 import java.util.UUID
 
 data class InboundTransferUpdateMessage constructor(
-    val externalId: UUID,
+    val orderRef: UUID,
     val channelCode: String,
     val currencyCode: String,
     val addressTo: String?,
