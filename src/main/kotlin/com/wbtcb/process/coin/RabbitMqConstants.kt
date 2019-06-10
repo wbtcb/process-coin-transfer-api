@@ -23,8 +23,8 @@ class RabbitMqConstants {
          * Inbound process
          * Is apply in case inbound coin
          */
-        const val COIN_WALLET_EXCHANGE = "coin-wallet"
+        const val COIN_WALLET_EXCHANGE = "wallet"
 
-        const val COIN_WALLET_INBOUND_ROUTING_PREFIX_KEY = "$COIN_WALLET_EXCHANGE.inbound"
+        const val COIN_WALLET_INBOUND_ROUTING_PREFIX_KEY = "$COIN_WALLET_EXCHANGE.coin.inbound"
     }
 }
