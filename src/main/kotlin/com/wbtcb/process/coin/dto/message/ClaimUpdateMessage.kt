@@ -15,7 +15,7 @@ data class ClaimUpdateMessage constructor(
     val comment: String?,
     val status: ClaimStatus,
     val metadata: JsonNode?,
-    val transactionHash: String? = null,
+    val transactionHashes: List<String>? = null,
     val fee: BigDecimal? = null,
     var reasons: List<MessageError>? = null
 ) : Serializable
